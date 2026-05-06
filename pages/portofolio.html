@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Portfolio — CengServices</title>
+  <link rel="stylesheet" href="../css/style.css" />
+</head>
+<body>
+
+<script src="../js/nav.js"></script>
+
+<div style="padding-top:64px;">
+
+  <div style="padding:5rem 2rem 3rem; border-bottom:1px solid var(--border);">
+    <div class="section-label fade-in"><span>//</span> OUR WORK</div>
+    <h1 class="section-title fade-in stagger-1" style="font-size:clamp(3rem,7vw,6rem);">
+      Selected<br /><span class="green">projects.</span>
+    </h1>
+  </div>
+
+  <!-- Filter -->
+  <div style="padding:1.5rem 2rem; border-bottom:1px solid var(--border); display:flex; gap:0.5rem; flex-wrap:wrap;">
+    <button onclick="filterPortfolio('all')" id="btn-all" style="font-family:var(--mono); font-size:11px; letter-spacing:0.1em; padding:8px 16px; border:1px solid var(--accent); background:var(--accent); color:#000; cursor:pointer; text-transform:uppercase;">ALL</button>
+    <button onclick="filterPortfolio('web')" id="btn-web" style="font-family:var(--mono); font-size:11px; letter-spacing:0.1em; padding:8px 16px; border:1px solid var(--border); background:transparent; color:var(--text-muted); cursor:pointer; text-transform:uppercase;">WEB DEV</button>
+    <button onclick="filterPortfolio('security')" id="btn-security" style="font-family:var(--mono); font-size:11px; letter-spacing:0.1em; padding:8px 16px; border:1px solid var(--border); background:transparent; color:var(--text-muted); cursor:pointer; text-transform:uppercase;">SECURITY</button>
+    <button onclick="filterPortfolio('bot')" id="btn-bot" style="font-family:var(--mono); font-size:11px; letter-spacing:0.1em; padding:8px 16px; border:1px solid var(--border); background:transparent; color:var(--text-muted); cursor:pointer; text-transform:uppercase;">BOTS</button>
+    <button onclick="filterPortfolio('discord')" id="btn-discord" style="font-family:var(--mono); font-size:11px; letter-spacing:0.1em; padding:8px 16px; border:1px solid var(--border); background:transparent; color:var(--text-muted); cursor:pointer; text-transform:uppercase;">DISCORD</button>
+  </div>
+
+  <!-- GRID -->
+  <div class="portfolio-grid" style="margin:0;" id="portfolio-grid">
+
+    <div class="portfolio-item fade-in" data-cat="web">
+      <div class="portfolio-tag">WEB DEVELOPMENT</div>
+      <div style="font-size:2.5rem; margin-bottom:1rem;">🛍</div>
+      <h3 class="portfolio-title">E-Commerce Landing Page</h3>
+      <p class="portfolio-desc">Landing page produk dengan animasi scroll, countdown timer, dan integrasi WhatsApp order. Dibangun dengan HTML/CSS/JS murni.</p>
+      <div class="stack-tags" style="margin-top:1.5rem;">
+        <span class="stack-tag">HTML/CSS</span>
+        <span class="stack-tag">JavaScript</span>
+      </div>
+    </div>
+
+    <div class="portfolio-item fade-in stagger-1" data-cat="bot">
+      <div class="portfolio-tag">TELEGRAM BOT</div>
+      <div style="font-size:2.5rem; margin-bottom:1rem;">📬</div>
+      <h3 class="portfolio-title">Notifikasi Bot Telegram</h3>
+      <p class="portfolio-desc">Bot Telegram untuk notifikasi pesanan otomatis dari Google Sheets. Menggunakan Python + Telegram Bot API + gspread.</p>
+      <div class="stack-tags" style="margin-top:1.5rem;">
+        <span class="stack-tag">Python</span>
+        <span class="stack-tag">Telegram API</span>
+        <span class="stack-tag">Google Sheets</span>
+      </div>
+    </div>
+
+    <div class="portfolio-item fade-in stagger-2" data-cat="discord">
+      <div class="portfolio-tag">DISCORD SETUP</div>
+      <div style="font-size:2.5rem; margin-bottom:1rem;">🏰</div>
+      <h3 class="portfolio-title">Gaming Community Server</h3>
+      <p class="portfolio-desc">Setup lengkap server gaming dengan 50+ channel, sistem leveling MEE6, anti-raid, ticket system, dan branding custom.</p>
+      <div class="stack-tags" style="margin-top:1.5rem;">
+        <span class="stack-tag">MEE6</span>
+        <span class="stack-tag">Carl-bot</span>
+        <span class="stack-tag">Custom Bot</span>
+      </div>
+    </div>
+
+    <div class="portfolio-item fade-in stagger-3" data-cat="security">
+      <div class="portfolio-tag">SECURITY AUDIT</div>
+      <div style="font-size:2.5rem; margin-bottom:1rem;">🔍</div>
+      <h3 class="portfolio-title">Web App Pentest Report</h3>
+      <p class="portfolio-desc">Penetration testing pada web app klien. Ditemukan 3 critical, 5 high severity CVE. Laporan PDF + remediation guide.</p>
+      <div class="stack-tags" style="margin-top:1.5rem;">
+        <span class="stack-tag">Burp Suite</span>
+        <span class="stack-tag">OWASP</span>
+        <span class="stack-tag">SQLmap</span>
+      </div>
+    </div>
+
+    <div class="portfolio-item fade-in" data-cat="web">
+      <div class="portfolio-tag">WEB DEVELOPMENT</div>
+      <div style="font-size:2.5rem; margin-bottom:1rem;">📋</div>
+      <h3 class="portfolio-title">Portfolio Website Freelancer</h3>
+      <p class="portfolio-desc">Portfolio minimalis dark-theme untuk desainer freelance. Animasi CSS custom, contact form, dan gallery lightbox.</p>
+      <div class="stack-tags" style="margin-top:1.5rem;">
+        <span class="stack-tag">HTML/CSS</span>
+        <span class="stack-tag">JavaScript</span>
+      </div>
+    </div>
+
+    <div class="portfolio-item fade-in stagger-1" data-cat="bot">
+      <div class="portfolio-tag">DISCORD BOT</div>
+      <div style="font-size:2.5rem; margin-bottom:1rem;">🤖</div>
+      <h3 class="portfolio-title">Moderation + Economy Bot</h3>
+      <p class="portfolio-desc">Discord bot fullstack dengan sistem ekonomi koin, shop, daily reward, auto-mod, dan logging channel. Node.js + MongoDB.</p>
+      <div class="stack-tags" style="margin-top:1.5rem;">
+        <span class="stack-tag">Discord.js</span>
+        <span class="stack-tag">Node.js</span>
+        <span class="stack-tag">MongoDB</span>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- CTA -->
+  <div style="padding:4rem 2rem; border-top:1px solid var(--border); text-align:center;">
+    <div class="section-label" style="justify-content:center; display:flex;"><span>//</span>&nbsp;WANT TO BE HERE?</div>
+    <h2 class="section-title fade-in" style="margin:1rem 0 2rem;">Let's build<br /><span class="green">your project.</span></h2>
+    <a href="contact.html" class="btn-primary">START A PROJECT ↗</a>
+  </div>
+
+</div>
+
+<script src="../js/main.js"></script>
+<script>
+function filterPortfolio(cat) {
+  const items = document.querySelectorAll('.portfolio-item');
+  const btns = document.querySelectorAll('[id^="btn-"]');
+
+  btns.forEach(b => {
+    b.style.background = 'transparent';
+    b.style.color = 'var(--text-muted)';
+    b.style.borderColor = 'var(--border)';
+  });
+
+  const active = document.getElementById('btn-' + cat);
+  active.style.background = 'var(--accent)';
+  active.style.color = '#000';
+  active.style.borderColor = 'var(--accent)';
+
+  items.forEach(item => {
+    if (cat === 'all' || item.dataset.cat === cat) {
+      item.style.display = 'block';
+    } else {
+      item.style.display = 'none';
+    }
+  });
+}
+</script>
+</body>
+</html>

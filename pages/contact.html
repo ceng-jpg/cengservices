@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact — CengServices</title>
+  <link rel="stylesheet" href="../css/style.css" />
+</head>
+<body>
+
+<script src="../js/nav.js"></script>
+
+<div style="padding-top:64px;">
+
+  <div style="padding:5rem 2rem 3rem; border-bottom:1px solid var(--border);">
+    <div class="section-label fade-in"><span>//</span> GET IN TOUCH</div>
+    <h1 class="section-title fade-in stagger-1" style="font-size:clamp(3rem,7vw,6rem);">
+      Let's work<br /><span class="green">together.</span>
+    </h1>
+    <p style="font-family:var(--mono); font-size:13px; color:var(--text-muted); margin-top:1.5rem; max-width:500px;" class="fade-in stagger-2">
+      Pilih channel paling nyaman. Kami aktif di semua platform di bawah dan biasanya reply dalam 12 jam.
+    </p>
+  </div>
+
+  <!-- CONTACT CHANNELS -->
+  <section class="section" style="padding-bottom:0;">
+    <div class="section-label fade-in"><span>//</span> CHANNELS</div>
+    <h2 class="section-title fade-in stagger-1" style="margin-bottom:2.5rem;">Reach us<br /><span class="green">anywhere.</span></h2>
+
+    <div class="contact-grid">
+
+      <!-- WhatsApp -->
+      <a href="https://wa.me/6281632195728" target="_blank" class="contact-card fade-in">
+        <span class="arrow">↗</span>
+        <div class="contact-icon">💬</div>
+        <div class="contact-platform">WHATSAPP</div>
+        <div class="contact-handle">081632195728</div>
+        <div class="contact-note">Fastest reply. Use for urgents.</div>
+      </a>
+
+      <!-- Telegram -->
+      <a href="https://t.me/iieellv" target="_blank" class="contact-card fade-in stagger-1">
+        <span class="arrow">↗</span>
+        <div class="contact-icon">✈️</div>
+        <div class="contact-platform">TELEGRAM</div>
+        <div class="contact-handle">@iieellv</div>
+        <div class="contact-note">Preferred for project chats.</div>
+      </a>
+
+      <!-- Discord -->
+      <a href="#" class="contact-card fade-in stagger-2" onclick="copyDiscord(event)">
+        <span class="arrow" id="discord-arrow">↗</span>
+        <div class="contact-icon">🎮</div>
+        <div class="contact-platform">DISCORD</div>
+        <div class="contact-handle">eelldisiniii</div>
+        <div class="contact-note">For server setup inquiries.</div>
+      </a>
+
+      <!-- Instagram 1 -->
+      <a href="https://instagram.com/ellteerp_" target="_blank" class="contact-card fade-in stagger-3">
+        <span class="arrow">↗</span>
+        <div class="contact-icon" style="font-size:1.4rem; width:36px; height:36px; border:2px solid var(--accent); display:flex; align-items:center; justify-content:center;">📷</div>
+        <div class="contact-platform">INSTAGRAM</div>
+        <div class="contact-handle">@ellteerp_</div>
+        <div class="contact-note">Portfolio / updates.</div>
+      </a>
+
+      <!-- Instagram 2 -->
+      <a href="https://instagram.com/30ceng.srv" target="_blank" class="contact-card fade-in">
+        <span class="arrow">↗</span>
+        <div class="contact-icon" style="font-size:1.4rem; width:36px; height:36px; border:2px solid var(--accent); display:flex; align-items:center; justify-content:center;">📷</div>
+        <div class="contact-platform">INSTAGRAM</div>
+        <div class="contact-handle">@30ceng.srv</div>
+        <div class="contact-note">Alt / services.</div>
+      </a>
+
+      <!-- Empty slot / placeholder -->
+      <div class="contact-card fade-in stagger-1" style="background: var(--bg2); cursor:default;">
+        <div style="font-family:var(--mono); font-size:11px; color:var(--text-muted); letter-spacing:0.1em; text-transform:uppercase; margin-top:auto;">MORE COMING</div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- FORM -->
+  <div class="form-section">
+    <div class="section-label fade-in"><span>//</span> FORM</div>
+    <h2 class="section-title fade-in stagger-1" style="margin-bottom:0.5rem;">Brief the<br /><span class="green">project.</span></h2>
+
+    <div class="form-wrap">
+      <div class="fade-in stagger-2">
+        <p style="font-family:var(--mono); font-size:13px; color:var(--text-muted); line-height:1.8; margin-bottom:1.5rem;">
+          Tell us what you need. The more detail, the faster we scope. We'll reply via the contact you provide within 12h.
+        </p>
+        <ul style="list-style:none; display:flex; flex-direction:column; gap:0.6rem;">
+          <li style="font-family:var(--mono); font-size:12px; color:var(--text-muted);">✦ Jelaskan kebutuhan proyekmu</li>
+          <li style="font-family:var(--mono); font-size:12px; color:var(--text-muted);">✦ Estimasi budget & deadline</li>
+          <li style="font-family:var(--mono); font-size:12px; color:var(--text-muted);">✦ Platform kontak yang kamu prefer</li>
+          <li style="font-family:var(--mono); font-size:12px; color:var(--text-muted);">✦ Kami response dalam 12 jam</li>
+        </ul>
+      </div>
+
+      <form id="contact-form" class="fade-in stagger-3">
+        <div class="form-fields">
+          <div class="field">
+            <label>NAME <span class="req">*</span></label>
+            <input type="text" placeholder="Your name" required />
+          </div>
+          <div class="field">
+            <label>EMAIL <span class="req">*</span></label>
+            <input type="email" placeholder="you@email.com" required />
+          </div>
+          <div class="field">
+            <label>CONTACT (WA/TG/DISCORD)</label>
+            <input type="text" placeholder="@username or number" />
+          </div>
+          <div class="field">
+            <label>SERVICE <span class="req">*</span></label>
+            <select required>
+              <option value="" disabled selected>Select a service</option>
+              <option>Web Development</option>
+              <option>Web Security Audit</option>
+              <option>Bot Development (Telegram)</option>
+              <option>Bot Development (Discord)</option>
+              <option>Discord Server Setup</option>
+              <option>Other / Not sure</option>
+            </select>
+          </div>
+          <div class="field full">
+            <label>PROJECT BRIEF <span class="req">*</span></label>
+            <textarea rows="6" placeholder="Describe what you need. Include: goals, features, tech stack preference, timeline, budget range..." required></textarea>
+          </div>
+        </div>
+        <div class="form-submit" style="margin-top:1.5rem;">
+          <button type="submit" class="btn-primary" style="border:none; cursor:pointer; width:100%; justify-content:center;">SEND MESSAGE →</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+</div>
+
+<script src="../js/main.js"></script>
+<script>
+function copyDiscord(e) {
+  e.preventDefault();
+  navigator.clipboard.writeText('eelldisiniii').then(() => {
+    const arrow = document.getElementById('discord-arrow');
+    arrow.textContent = '✓';
+    arrow.style.color = 'var(--accent)';
+    setTimeout(() => {
+      arrow.textContent = '↗';
+      arrow.style.color = '';
+    }, 2000);
+  });
+}
+</script>
+</body>
+</html>
